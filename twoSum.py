@@ -11,8 +11,29 @@ def twoSum(nums, target):
                 print(answer)
                 return answer;
 
+
+
+
+def  twoSum2(nums,target ):
+    answer = []
+    dict = {}
+    for x in range(len(nums)):
+        dict[nums[x]]= nums[x]
+    print(dict)
+
+    for i in range(len(nums)):
+        temp = target - nums[i]
+        if temp in dict:
+            answer = [nums[i], dict[temp]]
+            print(answer)
+            return answer
+
+
 if __name__ == "__main__":
     nums = [2,7,11,15]
-    twoSum(nums,9)
+    # twoSum(nums,9)
+    twoSum2(nums, 9)
+    print()
+
 
 # https://leetcode.com/problems/two-sum/
